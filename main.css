@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./images/pexels-thenexcanpictures-849701.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+/* Nav-bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 20px;
+}
+nav .logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffffffe0;
+}
+nav .bars {
+    display: none;
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+nav .bars:hover {
+    color: rgba(205, 205, 205, 0.7);
+}
+nav .navs ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+nav .navs ul .nav-item .nav-links {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s;
+}
+nav .navs ul .nav-item .nav-links::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffa200;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+nav .navs ul .nav-item .nav-links:hover::after {
+    width: 100%;
+    left: 0;
+}
+/* frist-page */
+.title-page{
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-left: 100px;
+}
+.title-page h1{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.676);
+    margin-top: 250px;
+}
+.title-page h1 span{
+    color: #ffa200;
+}
+.title-page h2{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.676);
+}
+.title-page .shop-btn{
+    width: 120px;
+    height: 50px;
+    border: none;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.804);
+    color: #ffffffa3;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 20px;
+    transition: all ease 0.5s;
+}
+.title-page .shop-btn:hover{
+    background-color: #ffa2006a;
+    cursor: pointer;
+}
+/* ################################################################# */
+/* Spinner */
+.cover {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    transition: opacity 0.5s;
+}
+.cover-hide{
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+.cover .spinner {
+    width: 50px;
+    height: 50px;
+    border-top: 3px solid #cfcfcf;
+    border-radius: 50%;
+    animation: spin 0.90s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* ################################################################ */
+/* Accordion */
+.accordion-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+    justify-content: center;
+}
+.accordion {
+    width: 180px;
+    color: white;
+    border-radius: 8px;
+}
+.accordion .accordion-btn {
+    border: none;
+    height: 40px;
+    width: 100%;
+    background-color: #00000077;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.accordion .accordion-btn:hover {
+    background-color: rgba(136, 136, 136, 1);
+}
+/* أيقونة السهم */
+.accordion .accordion-btn i {
+    float: right;
+    transition: transform 0.3s ease-in-out;
+}
+/* جسم الأكورديون */
+.accordion .accordion-body {
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 0 0 5px 5px;
+}
+/* عناصر القائمة داخل الأكورديون */
+.accordion .accordion-body .accordion-list {
+    list-style: none;
+    padding: 10px;
+}
+.accordion .accordion-body .accordion-list li {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all ease 0.3s;
+    cursor: pointer;
+    font-size: 14px;
+}
+.accordion .accordion-body .accordion-list li:hover {
+    color: #ffa200;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* Responsive */
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav .bars {
+        display: block;
+        color: #ffffffb6;
+        right: 0;
+        margin-right: 10px;
+    }
+    nav .navs {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    nav .navs ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+}
+@media (max-width: 460px){
+    .title-page h1{
+        top: 1px;
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    .title-page h2{
+        top: 0px;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .title-page .shop-btn{
+        margin-left: 70px;
+    }
+}
