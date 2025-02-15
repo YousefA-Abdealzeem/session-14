@@ -74,7 +74,7 @@ nav .navs ul .nav-item .nav-links:hover::after {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 50px;
-    color: rgba(255, 255, 255, 0.676);
+    color: rgb(255, 255, 255);
     margin-top: 250px;
 }
 .title-page h1 span{
@@ -83,7 +83,7 @@ nav .navs ul .nav-item .nav-links:hover::after {
 .title-page h2{
     text-transform: uppercase;
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.676);
+    color: rgb(255, 255, 255);
 }
 .title-page .shop-btn{
     width: 120px;
