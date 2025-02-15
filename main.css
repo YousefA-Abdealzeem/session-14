@@ -226,11 +226,11 @@ nav .navs ul .nav-item .nav-links:hover::after {
     .title-page h1{
         top: 1px;
         font-size: 30px;
-        margin-left: 20px;
+        /* margin-left: 20px; */
     }
     .title-page h2{
         top: 0px;
         font-size: 15px;
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
 }
