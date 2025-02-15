@@ -223,14 +223,20 @@ nav .navs ul .nav-item .nav-links:hover::after {
     }
 }
 @media (max-width: 460px){
+    body{
+        height: 100vh;
+    }
+    nav .logo {
+        margin: auto;
+    }
+
     .title-page h1{
         top: 1px;
         font-size: 30px;
-        /* margin-left: 20px; */
+        color: #ffa200;
     }
     .title-page h2{
         top: 0px;
         font-size: 15px;
-        /* margin-left: 10px; */
     }
 }
